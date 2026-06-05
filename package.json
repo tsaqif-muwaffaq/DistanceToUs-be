@@ -1,0 +1,44 @@
+{
+  "name": "distancetous-be",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/tsaqif-muwaffaq/DistanceToUs-be#readme",
+  "bugs": {
+    "url": "https://github.com/tsaqif-muwaffaq/DistanceToUs-be/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsaqif-muwaffaq/DistanceToUs-be.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "dev": "tsx watch --conditions=development src/index.ts",
+    "build": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\" && tsc",
+    "prestart": "npm run build",
+    "start": "node dist/src/index.js",
+    "prisma.generate": "prisma generate",
+    "prisma.migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.2.0",
+    "moment": "^2.30.1",
+    "morgan": "^1.11.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.9.1",
+    "prisma": "^7.8.0",
+    "tsx": "^4.19.4",
+    "typescript": "^6.0.3"
+  }
+}
